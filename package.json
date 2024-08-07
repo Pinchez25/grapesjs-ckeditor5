@@ -1,0 +1,51 @@
+{
+  "name": "grapesjs-plugin-ckeditor5",
+  "version": "0.1.11",
+  "description": "Replace the built-in RTE with CKEditor5 inline build, tested on ckeditor5 15.0.0",
+  "main": "dist/grapesjs-plugin-ckeditor5.min.js",
+  "scripts": {
+    "lint": "eslint src",
+    "v:patch": "npm version --no-git-tag-version patch",
+    "build": "npm run v:patch && webpack --env.production",
+    "start": "webpack-dev-server --open --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnlobster/grapesjs-plugin-ckeditor5.git"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin",
+    "ckeditor5",
+    "wysiwyg",
+    "rte"
+  ],
+  "author": "Artur Arseniev, John Webster",
+  "license": "BSD-3-Clause",
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "transform-object-rest-spread"
+    ]
+  },
+  "peerDependencies": {
+    "ckeditor5": "15.x",
+    "grapesjs": "0.x"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-inline": "^42.0.2"
+  }
+}
